@@ -1,0 +1,23 @@
+@import '../mixins/variables';
+
+@mixin font-face($font, $fontFile, $style, $weight) {
+    @font-face {
+        font-family: $font;
+        src:url('#{$folder}/#{$fontFile}.ttf') format("truetype");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include font-face('OpenSans','OpenSans-Bold', $style, 700 );
+@include font-face('OpenSans','OpenSans-BoldItalic', italic, 700 );
+@include font-face('OpenSans','OpenSans-ExtraBold', $style, 800 );
+@include font-face('OpenSans','OpenSans-ExtraBoldItalic', italic, 700 );
+@include font-face('OpenSans','OpenSans-Italic', italic, $weight );
+@include font-face('OpenSans','OpenSans-Light', $style, 300 );
+@include font-face('OpenSans','OpenSans-LightItalic', italic, 300 );
+@include font-face('OpenSans','OpenSans-Medium', $style, 500 );
+@include font-face('OpenSans','OpenSans-MediumItalic', italic, 500 );
+@include font-face('OpenSans','OpenSans-Regular', $style, 400 );
+@include font-face('OpenSans','OpenSans-SemiBold', $style, 600 );
+@include font-face('OpenSans','OpenSans-SemiBoldItalic', $style, 600 );
